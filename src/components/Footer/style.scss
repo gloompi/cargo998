@@ -1,0 +1,15 @@
+@import "../../styles/main.scss";
+
+.footer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: $secondary;
+
+  span {
+    color: $text-light;
+  }
+}

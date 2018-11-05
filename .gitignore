@@ -8,6 +8,7 @@
 
 # production
 /build
+/api/venv
 
 # misc
 .DS_Store

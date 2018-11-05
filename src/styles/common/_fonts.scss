@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'Learning';
+	src: url('/fonts/learning_curve_regular_ot_tt.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Berk';
+	src: url('/fonts/berkshireswash-regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mountains';
+	src: url('/fonts/MountainsofChristmas.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-bold';
+	src: url('/fonts/Roboto-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-bolditalic';
+	src: url('/fonts/Roboto-BoldItalic.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-italic';
+	src: url('/fonts/Roboto-Italic.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-light';
+	src: url('/fonts/Roboto-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Medium';
+	src: url('/fonts/Roboto-Medium.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin Roboto($style: regular) {
+	font-family: 'Roboto';
+
+	@if $style == bold {
+		font-family: 'Roboto-bold';
+	}
+
+	@if $style == light {
+		font-family: 'Roboto-light';
+	}
+
+	@if $style == medium {
+		font-family: 'Roboto-Medium';
+	}
+    
+  @if $style == italic {
+		font-family: 'Roboto-italic';
+	}
+}
