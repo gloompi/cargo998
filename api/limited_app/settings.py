@@ -26,7 +26,7 @@ SECRET_KEY = 'sy$6f()1$47cba9wx6rzr20ds3%odx@k!1)w9q_g_==p59+z0k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1', 'http://cargo998.ru']
 
 
 # Application definition
@@ -145,11 +145,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = ""
-STATICFILES_DIRS = (
-    os.path.join('static'),
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = ""
+# STATICFILES_DIRS = (
+#     os.path.join('static'),
+# )
 
 # Media files (images, videos, music, etc.)
 
@@ -183,7 +183,9 @@ CORS_ORIGIN_WHITELIST = (
     '*',
     '127.0.0.1',
     'localhost:3000',
-    'localhost'
+    'localhost',
+    '46.229.214.93',
+    'http://cargo998.ru'
 )
 # DAHSBOARD PATH
 
