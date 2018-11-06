@@ -2,6 +2,7 @@ import { action, observable } from 'mobx'
 import axios from 'axios'
 import _ from 'lodash'
 
+import { api } from '../configs' 
 import BasicStore from './BasicStore'
 
 class Header extends BasicStore {
@@ -10,7 +11,7 @@ class Header extends BasicStore {
   @observable error = false
 
   @action fetch = () => {
-    axios.get('http://localhost:8000/api/v0/header/')
+    axios.get(`${api}/header/`)
       .then(({ data }) => {
         this.loaded = true
         this.logo = _.get(data, 'results[0].logo')

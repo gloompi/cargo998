@@ -2,6 +2,7 @@ import { action, observable } from 'mobx'
 import axios from 'axios'
 import _ from 'lodash'
 
+import { api } from '../configs'
 import BasicStore from './BasicStore'
 
 class ThirdSection extends BasicStore {
@@ -10,7 +11,7 @@ class ThirdSection extends BasicStore {
   @observable error = false
 
   @action fetch = () => {
-    axios.get('http://localhost:8000/api/v0/section-4/')
+    axios.get(`${api}/section-4/`)
       .then(({ data }) => {
         this.loaded = true
         this.data = _.get(data, 'results')

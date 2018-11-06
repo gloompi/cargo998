@@ -1,0 +1,1 @@
+export const api = 'http://cargo998.ru/api/v0'
