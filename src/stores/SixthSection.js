@@ -30,7 +30,7 @@ class SixthSection extends BasicStore {
   }
 
   @action fetch = () => {
-    axios.get(`${api}/phones/``)
+    axios.get(`${api}/phones/`)
       .then(({ data }) => {
         this.loaded = true
         this.data = _.get(data, 'results')
