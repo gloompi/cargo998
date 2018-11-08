@@ -13,8 +13,8 @@ const FourthSection = ({
 }) => (
   <section className='section section__fourth'>
     <Parallax
-      offsetYMax={20}
-      offsetYMin={-20}
+      offsetYMax={0}
+      offsetYMin={-10}
       slowerScrollRate
       tag='div'
     >

@@ -27,6 +27,10 @@ from .serializers import (
 )
 
 # Create your views here.
+class PagesView(generics.ListAPIView):
+  queryset = PagesModel.objects.all()
+  serializer_class = PagesSerializer
+
 class PhoneView(generics.ListAPIView):
   queryset = PhoneModel.objects.all()
   serializer_class = PhoneSerializer

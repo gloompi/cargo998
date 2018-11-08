@@ -24,10 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sy$6f()1$47cba9wx6rzr20ds3%odx@k!1)w9q_g_==p59+z0k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1', 'http://cargo998.ru']
-
+ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1', 'http://cargo998.ru', 'cargo.ru']
 
 # Application definition
 
@@ -87,7 +86,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'limited_app.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -185,7 +183,8 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
     'localhost',
     '46.229.214.93',
-    'http://cargo998.ru'
+    'http://cargo998.ru',
+    'cargo'
 )
 # DAHSBOARD PATH
 

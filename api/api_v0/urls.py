@@ -20,4 +20,5 @@ urlpatterns = [
   url(r'^section-6/$', SectionSixView.as_view(), name='section-6'),
   url(r'^partners/$', PartnerView.as_view(), name='partners'),
   url(r'^phones/$', PhoneView.as_view(), name='phone'),
+  url(r'^pages/$', PagesView.as_view(), name='pages'),
 ]

@@ -2,9 +2,7 @@ import React from 'react'
 
 export default ({ list, active, setActive }) => (
   <ul className='tabs__list'>
-    {list.map(({ slug }) => {
-      let name = slug.replace('_', ' ')
-      name = `${name[0].toUpperCase()}${name.slice(1)}`
+    {list.map(({ slug, title }) => {
       const activeClass = () => active === slug ? 'active' : ''
       return <li key={slug} className={`tabs__item ${activeClass()}`}>
         <a 
@@ -15,7 +13,7 @@ export default ({ list, active, setActive }) => (
           }}
           className='tabs__link'
         >
-          {name}
+          {title}
         </a>
       </li>
     })}

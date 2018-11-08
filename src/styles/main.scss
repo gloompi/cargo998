@@ -31,23 +31,31 @@ $secondary: #252525;
     &:after {
       content: '';
       position: absolute;
-      top: -100px;
+      top: -150px;
       left: 50%;
       width: 100%;
       height: 250px;
       background-color: $bg;
       transform: rotate(-9deg);
+
+      @include phones() {
+        top: -100px;
+      }
     }
 
     &:before {
       content: '';
       position: absolute;
-      top: -100px;
+      top: -150px;
       right: 50%;
       width: 100%;
       height: 250px;
       background-color: $bg;
       transform: rotate(9deg);
+
+      @include phones() {
+        top: -100px;
+      }
     }
   }
 

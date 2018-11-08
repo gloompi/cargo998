@@ -1,10 +1,19 @@
 import React from 'react'
+import { compose, withState, withHandlers } from 'recompose'
 import { NavLink } from 'react-router-dom'
 
-export default () => {
+const Menu = ({ active, handleActive }) => {
+  const activeClass = () => active ? 'active' : ''
   return (
-    <nav className='header__mnu'>
-      <ul className='header__mnu-list'>
+    <nav className={`header__mnu ${activeClass}`}>
+      <a 
+        href='#link'
+        onClick={handleActive}
+        className={`header__mnu-btn ${activeClass()}`}
+      >
+        <span />
+      </a>
+      <ul className={`header__mnu-list ${activeClass()}`}>
         <li className='header__mnu-item'>
           <NavLink 
             to='/' 
@@ -55,3 +64,13 @@ export default () => {
     </nav>
   )
 }
+
+export default compose(
+  withState('active', 'setActive', false),
+  withHandlers({
+    handleActive: ({ setActive, active }) => e => {
+      e.preventDefault()
+      setActive(!active)
+    }
+  })
+)(Menu)

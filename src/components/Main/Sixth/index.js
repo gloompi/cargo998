@@ -28,12 +28,12 @@ const SixthSection = ({
         <h3 className='location__info-title'>Telephones</h3>
         <span className='location__info-descr'>
           {loaded && Object.values(data).map(({ phone }, idx) => (
-            <a key={idx} href='tel: +18006036035'>{phone}</a>
+            <a key={idx} href={`tel: ${phone}`}>{phone}</a>
           ))}
         </span>
         <h3 className='location__info-title'>E-mail</h3>
         <span className='location__info-descr'>
-          <a href='to: mail@demolink.org'>{email}</a>
+          <a href={`to: ${email}`}>{email}</a>
         </span>
       </address>
       <form method='post' action='/' className='location location__form'>

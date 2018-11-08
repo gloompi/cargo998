@@ -27,6 +27,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
     padding-bottom: 25px;
     margin-bottom: 25px;
 
@@ -48,6 +49,14 @@
     color: $white;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+
+    @include laptops() {
+      font-size: rem(50px);
+    }
+
+    @include phones() {
+      font-size: rem(40px);
+    }
   }
 
   &__longtitle {
@@ -57,6 +66,14 @@
 
   &__descr-wrap {
     padding: 0 180px 76px;
+
+    @include laptops() {
+      padding: 0 30px 30px;
+    }
+
+    @include phones() {
+      padding: 0 25px 25px;
+    }
 
     p {
       font-size: rem(16px);
@@ -110,6 +127,10 @@
     padding-bottom: 17px;
     margin-bottom: 17px;
 
+    @include tablets() {
+      font-size: rem(30px);
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -128,16 +149,31 @@
     text-align: center;
     line-height: 1.46;
     margin-bottom: 70px;
+    @include tablets() {
+      width: 80%;
+    }
   }
 
   &__first {
     padding-top: 292px;
     padding-bottom: 250px;
+
+    @include tablets() {
+      padding-top: 230px;
+    }
+
+    @include phones() {
+      padding-top: 180px;
+    }
   }
 
   &__second {
     padding-top: 126px;
     padding-bottom: 200px;
+
+    @include tablets() {
+      padding: 50px 0 100px;
+    }
 
     .second {
 
@@ -145,6 +181,11 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-around;
+
+        @include tablets() {
+          align-items: center;
+          flex-direction: column;
+        }
       }
 
       &__icon-item {
@@ -153,6 +194,15 @@
         justify-content: flex-start;
         flex-direction: column;
         width: 27%;
+
+        @include tablets() {
+          width: 100%;
+          margin-bottom: 75px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
 
         .icon__wrap {
           position: relative;
@@ -250,11 +300,20 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            flex-wrap: wrap;
             height: 100%;
+
+            @include phones() {
+              flex-direction: column;
+            }
           }
 
           &__item {
             position: relative;
+
+            @include phones() {
+              width: 100%;
+            }
 
             &:after {
               content:'';
@@ -271,10 +330,17 @@
             &.active, &:hover {
               .tabs__link {
                 color: $white;
+
+                @include phones() {
+                  background-color: $primary;
+                }
               }
 
               &:after {
                 width: calc(100% - 44px);
+                @include phones() {
+                  width: 100%;
+                }
               }
             }
           }
@@ -285,6 +351,18 @@
             color: $text-light;
             padding: 22px;
             transition: .3s;
+
+            @include tablets() {
+              font-size: rem(15px);
+            }
+
+            @include phones() {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 70px;
+              padding: 0;
+            }
           }
         }
       }
@@ -292,21 +370,51 @@
       &__content {
         display: flex;
         justify-content: space-between;
-        min-height: 100vh;
+        align-items: flex-start;
+        min-height: 300px;
         width: 100%;
         background-color: $bg;
         transition: .3s;
+
+        @include tablets() {
+          flex-direction: column;
+        }
 
         &-img {
           position: relative;
           width: 40%;
           height: 100%;
+          overflow: hidden;
           transition: .3s;
 
+          @include laptops() {
+            width: 50%;
+          }
+
+          @include tablets() {
+            width: 100%;
+          }
+
           img {
-            position: absolute;
-            right: 0;
+            position: relative;
+            width: 100%;
+            margin-right: auto;
+            float: right;
             transition: .3s;
+
+            @include tablets() {
+              float: none;
+            }
+
+            @include desktops() {
+              height: 100%;
+              width: auto;
+            }
+
+            @include tablets() {
+              width: 100%;
+              height: auto;
+            }
           }
         }
 
@@ -315,6 +423,19 @@
           padding: 122px 50px 50px;
           text-align: left;
           transition: .3s;
+
+          @include laptops() {
+            width: 50%;
+          }
+
+          @include tablets() {
+            width: 100%;
+            padding: 50px;
+          }
+
+          @include phones() {
+            padding: 25px;
+          }
         }
 
         &-title {
@@ -344,11 +465,21 @@
     height: 390px;
     overflow: hidden;
 
+    @include tablets() {
+      height: auto;
+      min-height: 390px;
+    }
+
     .parallax {
       width: 100%;
       height: 450px;
       background: url('/images/parallax01.jpg') center no-repeat;
       background-size: cover;
+
+      @include tablets() {
+        position: absolute;
+        height: 1000px;
+      }
     }
 
     .fourth {
@@ -357,15 +488,33 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: wrap;
         top: 50%;
         height: 100%;
         width: 100%;
         transform: translateY(-50%);
+
+        @include tablets() {
+          position: relative;
+          flex-direction: column;
+          transform: none;
+          top: 0;
+          height: auto;
+          padding: 50px 25px;
+        }
       }
 
       &__item {
         display: flex;
         flex-direction: column;
+
+        @include tablets() {
+          margin-bottom: 40px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
 
         &-title {
           @include Roboto(medium);
@@ -373,6 +522,10 @@
           color: $primary;
           text-transform: uppercase;
           margin-bottom: 26px;
+          
+          @include tablets() {
+            margin-bottom: 10px;
+          }
         }
 
         &-descr {
@@ -388,6 +541,10 @@
     background-color: $bg;
     border-bottom: 2px solid rgba($text-light, .5);
 
+    @include tablets() {
+      padding: 60px 0;
+    }
+
     .partner {
       &__list {
         display: flex;
@@ -395,6 +552,10 @@
         justify-content: space-between;
         width: 100%;
         margin-bottom: 50px;
+
+        @include tablets() {
+          flex-direction: column;
+        }
       }
 
       &__item {
@@ -406,6 +567,20 @@
         background-color: $primary;
         border-radius: 5px;
         overflow: hidden;
+
+        @include tablets() {
+          width: 80%;
+          height: 175px;
+          margin-bottom: 25px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        @include phones() {
+          width: 90%;
+        }
 
         img {
           min-height: 100%;
@@ -432,6 +607,14 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    @include laptops() {
+      padding: 0 25px;
+    }
+
+    @include tablets() {
+      flex-direction: column;
+    }
   }
 
   .location {
@@ -448,6 +631,11 @@
     &__info {
       width: 370px;
       margin-right: 29px;
+
+      @include tablets() {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
 
       &-title {
         @include Roboto(medium);
@@ -519,6 +707,10 @@
         max-height: 230px;
         margin-bottom: 25px;
       }
+    }
+
+    @include tablets() {
+      width: 100%;
     }
   }
 }

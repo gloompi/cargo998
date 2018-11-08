@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import { createMarkup } from '../../../helpers'
 
@@ -18,7 +17,6 @@ export default ({
     <div className='third__content-main'>
       <h2 className='third__content-title'>{title}</h2>
       <div className='third__content-descr' dangerouslySetInnerHTML={createMarkup(content)} />
-      <Link className='third__content-link' to='/services/submarin'>Узнать больше</Link>
     </div>
   </div>
 )

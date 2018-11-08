@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { inject, observer } from 'mobx-react'
 import { compose, lifecycle } from 'recompose'
-import { Link } from 'react-router-dom'
 
 import Loader from '../../Loader'
 
@@ -36,7 +35,6 @@ const FifthSection = ({
         }
       </ul>
     </div>
-    <Link className='more__btn' to='/partners'>Посмотреть все</Link>
   </section>
 )
 
