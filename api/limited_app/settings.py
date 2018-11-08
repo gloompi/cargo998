@@ -26,7 +26,7 @@ SECRET_KEY = 'sy$6f()1$47cba9wx6rzr20ds3%odx@k!1)w9q_g_==p59+z0k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1', 'http://cargo998.ru', 'cargo.ru']
+ALLOWED_HOSTS = ['46.229.214.93', 'localhost', '127.0.0.1', 'http://cargo998.ru', 'cargo998.ru']
 
 # Application definition
 
@@ -184,7 +184,7 @@ CORS_ORIGIN_WHITELIST = (
     'localhost',
     '46.229.214.93',
     'http://cargo998.ru',
-    'cargo'
+    'cargo998.ru'
 )
 # DAHSBOARD PATH
 
