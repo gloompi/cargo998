@@ -5,10 +5,12 @@ import ThirdSection from './ThirdSection'
 import FourthSection from './FourthSection'
 import FifthSection from './FifthSection'
 import SixthSection from './SixthSection'
+import Pages from './Pages'
 
 const stores = {}
 
 Object.assign(stores, {
+  pages: new Pages(stores),
   header: new Header(stores),
   firstSection: new FirstSection(stores),
   secondSection: new SecondSection(stores),

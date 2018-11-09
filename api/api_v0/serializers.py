@@ -69,7 +69,7 @@ class PagesSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = PagesModel
-    fields = ('title', 'content')
+    fields = ('title', 'content', 'slug')
 
 # class CreateUserSerializer(serializers.ModelSerializer):
   
