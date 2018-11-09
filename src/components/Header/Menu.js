@@ -27,7 +27,6 @@ const Menu = ({
           <NavLink 
             to='/' 
             className='header__mnu-link' 
-            activeClassName='active'
             onClick={handleClose}
             exact
           >
@@ -38,8 +37,7 @@ const Menu = ({
           <li key={slug} className='header__mnu-item'>
             <NavLink 
               to={`/pages/${slug}`} 
-              className='header__mnu-link' 
-              activeClassName='active'
+              className='header__mnu-link'
               onClick={handleClose}
             >
               {title}

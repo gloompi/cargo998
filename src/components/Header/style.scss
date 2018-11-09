@@ -198,12 +198,12 @@
       transition: .3s;
     }
 
-    &.active {
-      color: $primary;
+    // &.active {
+    //   color: $primary;
       
-      &:after {
-        width: 100%;
-      }
-    }
+    //   &:after {
+    //     width: 100%;
+    //   }
+    // }
   }
 }

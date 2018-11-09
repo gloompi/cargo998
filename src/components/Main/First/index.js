@@ -1,11 +1,11 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withHandlers } from 'recompose'
 
-import { createMarkup } from '../../../helpers'
+import { createMarkup, scrollIt } from '../../../helpers'
 import Loader from '../../Loader'
 
-const First = ({ firstSection }) => {
+const First = ({ firstSection, handleScroll }) => {
   if (!firstSection.loaded) return <Loader />
   if (firstSection.error) return null
   const { title, longtitle, description } = firstSection.data
@@ -17,7 +17,7 @@ const First = ({ firstSection }) => {
           <span className='main__longtitle'>{longtitle}</span>
         </div>
         <div className='main__descr-wrap' dangerouslySetInnerHTML={createMarkup(description)} />
-        <a href='#order' className='main__order-btn'>Сделать заказ</a>
+        <a href='#order' onClick={handleScroll} className='main__order-btn'>Сделать заказ</a>
       </div>
     </section>
   )
@@ -29,6 +29,12 @@ export default compose(
     componentDidMount() {
       const { firstSection, loaded } = this.props
       if(!loaded) firstSection.fetch()
+    }
+  }),
+  withHandlers({
+    handleScroll: () => e => {
+      e.preventDefault()
+      scrollIt(document.getElementById('point'), 150)
     }
   }),
   observer,

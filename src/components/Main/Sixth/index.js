@@ -36,7 +36,7 @@ const SixthSection = ({
           <a href={`to: ${email}`}>{email}</a>
         </span>
       </address>
-      <form method='post' action='/' className='location location__form'>
+      <form method='post' id='point' action='/' className='location location__form'>
         <input 
           type='text' 
           className='location__form-input' 
