@@ -16,7 +16,7 @@ class GallerySerializer(serializers.ModelSerializer):
 
   class Meta:
     model = Gallery
-    field = ('src', )
+    fields = ('src', )
 
 class PhoneSerializer(serializers.ModelSerializer):
   

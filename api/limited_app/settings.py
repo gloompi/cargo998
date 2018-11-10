@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'api_v0',
     'pages',
     'header',
+    'gallery',
     'section_one',
     'section_two',
     'section_three',

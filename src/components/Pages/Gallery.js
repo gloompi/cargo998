@@ -25,7 +25,7 @@ export default compose(
   lifecycle({
     componentDidMount() {
       const { fetch, loaded } = this.props.gallery
-      if (loaded) fetch()
+      if (!loaded) fetch()
     }
   }),
   observer,

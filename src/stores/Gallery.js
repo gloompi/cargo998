@@ -14,7 +14,7 @@ class Gallery extends BasicStore {
     axios.get(`${api}/gallery/`)
       .then(({ data }) => {
         this.loaded = true
-        this.logo = _.get(data, 'results')
+        this.data = _.get(data, 'results')
       })
       .catch(error => {
         console.log('ERROR', error)
