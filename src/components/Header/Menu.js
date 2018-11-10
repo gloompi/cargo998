@@ -44,6 +44,24 @@ const Menu = ({
             </NavLink>
           </li>
         ))}
+        <li className='header__mnu-item'>
+          <NavLink 
+            to='/gallery' 
+            className='header__mnu-link' 
+            onClick={handleClose}
+          >
+            Галерея
+          </NavLink>
+        </li>
+        <li className='header__mnu-item'>
+          <NavLink 
+            to='/contacts' 
+            className='header__mnu-link' 
+            onClick={handleClose}
+          >
+            Контакты
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )

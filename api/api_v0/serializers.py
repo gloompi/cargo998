@@ -9,8 +9,15 @@ from section_three.models import SectionThreeModel
 from section_four.models import SectionFourModel
 from section_fife.models import SectionFifeModel, PartnerModel
 from section_six.models import SectionSixModel, PhoneModel
+from gallery.models import Gallery
 
 # Additional serializers
+class GallerySerializer(serializers.ModelSerializer):
+
+  class Meta:
+    model = Gallery
+    field = ('src', )
+
 class PhoneSerializer(serializers.ModelSerializer):
   
   class Meta:

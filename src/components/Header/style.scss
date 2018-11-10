@@ -27,7 +27,7 @@
 
   &.active {
     position: fixed;
-    padding: 5px 15%;
+    padding: 5px 25px;
     width: 100%;
     max-width: 100%;
     background-color: $black;
@@ -46,11 +46,11 @@
 
   &__home_link {
     position: relative;
-    max-width: 220px;
+    width: 220px;
     transition: .3s;
 
     @include laptops() {
-      max-width: 180px;
+      width: 180px;
     }
 
     &:after {
@@ -76,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex-wrap: wrap;
     transition: .3s opacity;
     
     @include phones() {

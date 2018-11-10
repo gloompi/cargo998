@@ -30,5 +30,32 @@
       width: 100%;
       height: auto;
     }
+
+    .contacts__wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .map {
+      width: 58%;
+      min-height: 700px;
+    }
+
+    .contacts {
+      width: 38%;
+
+      p {
+        @include Roboto(italic);
+        font-size: rem(20px);
+        line-height: 30px;
+        letter-spacing: 1.5px;
+
+        strong {
+          @include Roboto(bold);
+          margin-right: 10px;
+        }
+      }
+    }
   }
 }
