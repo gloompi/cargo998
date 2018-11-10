@@ -22,7 +22,7 @@ from section_fife.models import SectionFifeModel, PartnerModel
 from section_six.models import SectionSixModel, PhoneModel
 from gallery.models import Gallery
 from .serializers import ( 
-  PagesSerializer, HeaderSerializer, SectionOneSerializer, GallerySerializer
+  PagesSerializer, HeaderSerializer, SectionOneSerializer, GallerySerializer,
   SectionTwoSerializer, SectionThreeSerializer, SectionFourSerializer,
   SectionFifeSerializer, SectionSixSerializer, PartnerSerializer, PhoneSerializer
 )
