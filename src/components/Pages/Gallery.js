@@ -1,19 +1,38 @@
 import React from 'react'
 import { inject, observer } from 'mobx-react'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withState, withHandlers } from 'recompose'
 
-const Gallery = ({ gallery: { data, loaded } }) => (
+import Popup from '../Popup'
+
+const Gallery = ({ 
+  gallery: { data, loaded },
+  active,
+  src,
+  handleClick,
+  setActive,
+}) => (
   <main className='main'>
+    <Popup 
+      active={active} 
+      src={src}
+      handleClick={setActive} 
+    />
     <div className='main__background' />
     <section className='common__section page'>
       <div className='container'>
         <h1 className='page__title'>Галлерея</h1>
         <div className='page__content'>
-          {loaded && Object.values(data).map(({ src }) => (
-            <div className='gallery__wrap'>
-              <img src={src} alt='gallery-pic' />
-            </div>
-          ))}
+          <ul className='gallery__wrap'>
+            {loaded && Object.values(data).map(({ src }, idx) => (
+              <li 
+                key={idx} 
+                onClick={() => handleClick(src)}
+                className='gallery__item'
+              >
+                <img src={src} alt='gallery-pic' />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
@@ -22,6 +41,20 @@ const Gallery = ({ gallery: { data, loaded } }) => (
 
 export default compose(
   inject('gallery'),
+  withState('src', 'setSource', null),
+  withState('active', 'setActive', false),
+  withHandlers({
+    handleClick: ({ 
+      setSource,
+      setActive,
+      active,
+      src
+    }) => (source) => {
+      setActive(true)
+      setSource(source)
+      console.log(src, active)
+    }
+  }),
   lifecycle({
     componentDidMount() {
       const { fetch, loaded } = this.props.gallery

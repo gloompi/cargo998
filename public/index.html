@@ -39,4 +39,20 @@
   </body>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=7210ee31-4905-4c55-af20-6f6c9c09e6a6&lang=ru_RU" type="text/javascript">
   </script>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map", {
+          center: [29.30861579979043,120.07148847870334],
+          zoom: 10
+        });
+
+        var myPlacemark = new ymaps.Placemark([29.30861579979043,120.07148847870334])
+        myMap.behaviors.disable('scrollZoom')
+        myMap.geoObjects.add(myPlacemark)
+    }
+</script>
 </html>

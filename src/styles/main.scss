@@ -130,3 +130,48 @@ $secondary: #252525;
     max-width: 100%;
   }
 }
+
+.popup {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: -9999px;
+  background-color: rgba($black, .7);
+  z-index: 1000;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+    left: 0;
+  }
+  
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    img {
+      height: 80%;
+      max-width: 100%;
+      @include tablets() {
+        height: auto;
+        width: 90%;
+      }
+    }
+  }
+
+  &__close {
+    font-weight: bold;
+    font-size: rem(27px);
+    position: absolute;
+    left: calc(100% + 20px);
+    top: 10%;
+    color: $primary;
+  }
+}

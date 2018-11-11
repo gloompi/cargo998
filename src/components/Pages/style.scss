@@ -35,15 +35,27 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .map {
       width: 58%;
-      min-height: 700px;
+      max-height: 700px;
+      background: $white;
+
+      @include tablets() {
+        height: 300px;
+        width: 100%;
+        margin-bottom: 30px;
+      }
     }
 
     .contacts {
       width: 38%;
+
+      @include tablets() {
+        width: 100%;
+      }
 
       p {
         @include Roboto(italic);
@@ -54,6 +66,44 @@
         strong {
           @include Roboto(bold);
           margin-right: 10px;
+        }
+      }
+    }
+
+    .gallery {
+      &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 23%;
+        margin-bottom: 25px;
+        border: 5px solid $primary;
+        transform: rotate(-3deg);
+        cursor: pointer;
+        overflow: hidden;
+
+        @include tablets() {
+          width: 49%;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &:nth-child(2), &:first-child {
+          width: 49%;
+        }
+
+        &:nth-child(3n + 2) {
+          transform: rotate(2deg) scale(.9);
         }
       }
     }
