@@ -30,12 +30,37 @@
     padding: 25px;
     background-color: $bg;
 
-    .about__wraper {
+    .about__wrap {
 
       img {
         float: right;
         margin: 0 35px 35px 0;
       }
+
+      ul {
+        padding: 0 25px;
+
+        li {
+          font-size: rem(16px);
+          padding: 15px 0;
+
+          &:before {
+            content: '\f072';
+            font-family: 'Font Awesome 5 Free'; 
+            font-weight: 900;
+            margin-right: 5px; 
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .sphere__pic {
+      margin: 25px;
+    }
+
+    h2 {
+      text-align: left;
     }
 
     p {
@@ -49,6 +74,10 @@
       i {
         margin-right: 10px;
       }
+    }
+
+    ol, ul {
+      padding: 0;
     }
 
     img {

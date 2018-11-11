@@ -14,6 +14,7 @@ const Contacts = () => (
             <div id="map" className='map' />
             <div className='contacts'>
               <p><MaterialIcon icon='call' size={25}/> <strong>Nuri: </strong>13175523503</p>
+              <p><MaterialIcon icon='chat_bubble' size={25}/> <strong>WhatsApp: </strong>13175523503</p>
               <p><MaterialIcon icon='chat' size={25}/> <strong>wechat: </strong>13175523503</p>
               <p><MaterialIcon icon='chat_bubble_outline' size={25}/> <strong>QQ: </strong>3318886240</p>
               <p><MaterialIcon icon='email' size={25}/> <strong>Email: </strong>nura_solnyshka@mail.ru</p>

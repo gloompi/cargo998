@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import _ from 'lodash'
 import { inject, observer } from 'mobx-react'
 import { compose, withHandlers } from 'recompose'
+import 'material-icons-react'
 
 import { createMarkup } from '../../helpers'
 
