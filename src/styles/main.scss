@@ -176,5 +176,9 @@ $secondary: #252525;
     left: calc(100% + 20px);
     top: 10%;
     color: $primary;
+
+    i {
+      color: $primary;
+    }
   }
 }

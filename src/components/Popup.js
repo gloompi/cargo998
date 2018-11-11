@@ -1,4 +1,5 @@
 import React from 'react'
+import MaterialIcon from 'material-icons-react'
 import { compose, lifecycle, withHandlers } from 'recompose'
 
 const Popup = ({ active, handleClick, src }) => (
@@ -6,7 +7,7 @@ const Popup = ({ active, handleClick, src }) => (
     <div className='popup__container'>
       <img src={src} className='popup__img' alt='popup_image' />
       <a href='#close' className='popup__close' onClick={() => handleClick(false)}>
-        &#9747;
+        <MaterialIcon icon='close' size={25} color='#008BD9' />
       </a>
     </div>
   </div>

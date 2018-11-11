@@ -12,11 +12,13 @@ const Gallery = ({
   setActive,
 }) => (
   <main className='main'>
-    {active && <Popup 
-      active={active} 
-      src={src}
-      handleClick={setActive} 
-    />}
+    {active && (
+      <Popup 
+        active={active} 
+        src={src}
+        handleClick={setActive} 
+      />
+    )}
     <div className='main__background' />
     <section className='common__section page'>
       <div className='container'>
