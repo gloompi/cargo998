@@ -12,11 +12,11 @@ const Gallery = ({
   setActive,
 }) => (
   <main className='main'>
-    <Popup 
+    {active && <Popup 
       active={active} 
       src={src}
       handleClick={setActive} 
-    />
+    />}
     <div className='main__background' />
     <section className='common__section page'>
       <div className='container'>
@@ -47,12 +47,9 @@ export default compose(
     handleClick: ({ 
       setSource,
       setActive,
-      active,
-      src
     }) => (source) => {
       setActive(true)
       setSource(source)
-      console.log(src, active)
     }
   }),
   lifecycle({

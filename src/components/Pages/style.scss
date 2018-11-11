@@ -3,9 +3,16 @@
 .page {
 
   &__title {
+    position: absolute;
     font-size: rem(50px);
-    color: $white;
-    margin-bottom: 50px;
+    color: $primary;
+    top: -200px;
+    left: 50%;
+    padding: 50px 75px;
+    background-color: $bg;
+    border-radius: 10px;
+    box-shadow: 3.5px 6px 20px 0px rgba( 0, 0, 0, 0.1 );
+    transform: translateX(-50%);
 
     @include tablets() {
       font-size: rem(40px);
@@ -20,10 +27,25 @@
     padding: 25px;
     background-color: $bg;
 
+    .about__wraper {
+
+      img {
+        float: right;
+        margin: 0 35px 35px 0;
+      }
+    }
+
     p {
       @include Roboto(light);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       font-size: rem(18px);
       text-align: left;
+
+      i {
+        margin-right: 10px;
+      }
     }
 
     img {
@@ -40,7 +62,7 @@
 
     .map {
       width: 58%;
-      max-height: 700px;
+      height: 700px;
       background: $white;
 
       @include tablets() {

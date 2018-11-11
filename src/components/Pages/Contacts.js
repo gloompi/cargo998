@@ -1,6 +1,8 @@
 import React from 'react'
 import { compose, lifecycle } from 'recompose'
 import axios from 'axios'
+import MaterialIcon from 'material-icons-react'
+
 const Contacts = () => (
   <main className='main'>
     <div className='main__background' />
@@ -11,11 +13,11 @@ const Contacts = () => (
           <div className='contacts__wrapper'>
             <div id="map" className='map' />
             <div className='contacts'>
-              <p><strong>Nuri: </strong>13175523503</p>
-              <p><strong>wechat: </strong>13175523503</p>
-              <p><strong>QQ: </strong>3318886240</p>
-              <p><strong>Email: </strong>nura_solnyshka@mail.ru</p>
-              <p><strong>Адрес нашего офиса: </strong>Chouzhou North Road 533, 5th floor, Yiwu city, Zhejiang Province, China</p>
+              <p><MaterialIcon icon='call' size={25}/> <strong>Nuri: </strong>13175523503</p>
+              <p><MaterialIcon icon='chat' size={25}/> <strong>wechat: </strong>13175523503</p>
+              <p><MaterialIcon icon='chat_bubble_outline' size={25}/> <strong>QQ: </strong>3318886240</p>
+              <p><MaterialIcon icon='email' size={25}/> <strong>Email: </strong>nura_solnyshka@mail.ru</p>
+              <p><MaterialIcon icon='room' size={25}/> <strong>Адрес нашего офиса: </strong>Chouzhou North Road 533, 5th floor, Yiwu city, Zhejiang Province, China</p>
             </div>
           </div>
         </div>

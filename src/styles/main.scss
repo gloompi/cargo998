@@ -45,8 +45,11 @@ $secondary: #252525;
 }
 
 .common__section {
-  padding-top: 292px;
+  position: relative;
+  margin-top: 292px;
+  padding-top: 150px;
   padding-bottom: 111px;
+  background-color: $bg;
 
   @include tablets() {
     padding-top: 230px;
