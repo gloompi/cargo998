@@ -30,6 +30,7 @@ export default compose(
     componentDidMount() {
       const header = document.getElementById('header')
       const className = header.className
+      console.log('PROPS', this.props)
       window.addEventListener('scroll', e => {
         if (e.pageY >= 50) {
           if (className.includes('active')) return null

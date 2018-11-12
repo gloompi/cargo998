@@ -10,6 +10,7 @@ import stores from './stores'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './components/Main'
+import Services from './components/Pages/Services'
 import Pages from './components/Pages'
 import Contacts from './components/Pages/Contacts'
 import Gallery from './components/Pages/Gallery'
@@ -24,6 +25,7 @@ class App extends Component {
               <Header />
               <Switch>
                 <Route exact path='/' component={Main} />
+                <Route path='/services' component={Services} />
                 <Route path='/pages' component={Pages} />
                 <Route path='/contacts' component={Contacts} />
                 <Route path='/gallery' component={Gallery} />

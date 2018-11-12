@@ -2,6 +2,7 @@ import React from 'react'
 import MaterialIcon from 'material-icons-react'
 import { inject, observer } from 'mobx-react'
 import { compose, lifecycle } from 'recompose'
+import { Link } from 'react-router-dom'
 
 import Loader from '../../Loader'
 
@@ -31,6 +32,7 @@ const Services = ({
           : <Loader />
         }
       </ul>
+      <Link to='/services' className='third__content-link' >Подробнее</Link>
     </div>
   </section>
 )

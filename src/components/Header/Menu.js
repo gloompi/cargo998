@@ -37,13 +37,13 @@ const Menu = ({
           </NavLink>
         </li>
         <li className='header__mnu-item'>
-          <a
-            href='#scroll'
-            className='header__mnu-link' 
-            onClick={handleScroll}
+          <NavLink
+            to='/services' 
+            className='header__mnu-link'
+            onClick={handleClose}
           >
             Услуги
-          </a>
+          </NavLink>
         </li>
         {loaded && Object.values(data).map(({ slug, title }) => (
           <li key={slug} className='header__mnu-item'>
