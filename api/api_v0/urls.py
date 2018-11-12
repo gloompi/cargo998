@@ -22,4 +22,5 @@ urlpatterns = [
   url(r'^phones/$', PhoneView.as_view(), name='phone'),
   url(r'^pages/$', PagesView.as_view(), name='pages'),
   url(r'^gallery/$', GalleryView.as_view(), name='gallery'),
+  url(r'^services/$', ServiceView.as_view(), name='services'),
 ]
