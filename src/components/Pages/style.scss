@@ -90,6 +90,28 @@
       align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      &.storehouse {
+        width: 100%;
+        margin-top: 50px;
+        padding-top: 50px;
+        border-top: 1px solid $secondary;
+      
+        .storehouse__pic {
+          position: relative;
+          width: 58%;
+          background: $white;
+
+          @include tablets() {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
 
     .map {
