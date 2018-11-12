@@ -134,6 +134,63 @@
     }
   }
 
+  &__services {
+    padding: 100px 0;
+    background-color: $bg;
+    border: 2px solid rgba($text-light, .5);
+
+    @include tablets() {
+      padding: 60px 0;
+    }
+
+    .service {
+      &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin-bottom: 25px;
+
+        .material-icons {
+          color: $primary;
+          margin-right: 15px;
+          transition: .3s;
+        }
+
+        &:hover {
+          .material-icons {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        h3 {
+          @include Roboto(mdeium);
+          font-size: rem(22px);
+          color: $primary;
+          text-transform: uppercase;
+        }
+
+        span {
+          @include Roboto(light);
+          font-size: rem(14px);
+        }
+      }
+    }
+  }
+
   &__first {
     padding-top: 292px;
     padding-bottom: 250px;

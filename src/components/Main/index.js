@@ -7,6 +7,7 @@ import Third from './Third'
 import Fourth from './Fourth'
 import Fifth from './Fifth'
 import Sixth from './Sixth'
+import Services from './Services'
 
 export default () => {
   return (
@@ -14,6 +15,7 @@ export default () => {
       <div className='main__background' />
       <First />
       <Second />
+      <Services />
       <Third />
       <Fourth />
       <Fifth />

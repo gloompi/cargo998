@@ -34,7 +34,7 @@ export default compose(
   withHandlers({
     handleScroll: () => e => {
       e.preventDefault()
-      scrollIt(document.getElementById('point'), 150)
+      scrollIt(3750)
     }
   }),
   observer,

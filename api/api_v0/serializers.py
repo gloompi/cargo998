@@ -17,7 +17,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = ServiceModel
-    field = ('slug', 'title', 'descr')
+    fields = ('slug', 'title', 'descr')
 
 class GallerySerializer(serializers.ModelSerializer):
 

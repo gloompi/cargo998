@@ -3,6 +3,8 @@ import { inject, observer } from 'mobx-react'
 import { compose, withState, withHandlers, lifecycle } from 'recompose'
 import { NavLink } from 'react-router-dom'
 
+import { scrollIt } from '../../helpers'
+
 const Menu = ({
   pages: {
     loaded,
@@ -11,6 +13,7 @@ const Menu = ({
   active,
   handleActive,
   handleClose,
+  handleScroll,
 }) => {
   const activeClass = () => active ? 'active' : ''
   return (
@@ -32,6 +35,15 @@ const Menu = ({
           >
             Главная
           </NavLink>
+        </li>
+        <li className='header__mnu-item'>
+          <a
+            href='#scroll'
+            className='header__mnu-link' 
+            onClick={handleScroll}
+          >
+            Услуги
+          </a>
         </li>
         {loaded && Object.values(data).map(({ slug, title }) => (
           <li key={slug} className='header__mnu-item'>
@@ -81,7 +93,11 @@ export default compose(
       e.preventDefault()
       setActive(!active)
     },
-    handleClose: ({ setActive }) => () => setActive(false)
+    handleClose: ({ setActive }) => () => setActive(false),
+    handleScroll: () => e => {
+      e.preventDefault()
+      scrollIt(1500)
+    }
   }),
   observer,
 )(Menu)
