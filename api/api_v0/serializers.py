@@ -10,8 +10,15 @@ from section_four.models import SectionFourModel
 from section_fife.models import SectionFifeModel, PartnerModel
 from section_six.models import SectionSixModel, PhoneModel
 from gallery.models import Gallery
+from service.models import ServiceModel
 
 # Additional serializers
+class ServiceSerializer(serializers.ModelSerializer):
+
+  class Meta:
+    model = ServiceModel
+    field = ('slug', 'title', 'descr')
+
 class GallerySerializer(serializers.ModelSerializer):
 
   class Meta:

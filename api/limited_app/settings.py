@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'section_four',
     'section_fife',
     'section_six',
+    'service',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +130,7 @@ AUTHENTICATION_BACKENDS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 

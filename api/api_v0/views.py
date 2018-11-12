@@ -21,13 +21,19 @@ from section_four.models import SectionFourModel
 from section_fife.models import SectionFifeModel, PartnerModel
 from section_six.models import SectionSixModel, PhoneModel
 from gallery.models import Gallery
+from service.models import ServiceModel
 from .serializers import ( 
   PagesSerializer, HeaderSerializer, SectionOneSerializer, GallerySerializer,
   SectionTwoSerializer, SectionThreeSerializer, SectionFourSerializer,
-  SectionFifeSerializer, SectionSixSerializer, PartnerSerializer, PhoneSerializer
+  SectionFifeSerializer, SectionSixSerializer, PartnerSerializer, PhoneSerializer,
+  ServiceSerializer,
 )
 
 # Create your views here.
+class ServiceView(generics.ListAPIView):
+  queryset = ServiceModel.objects.all()
+  serializer_class = ServiceSerializer
+
 class GalleryView(generics.ListAPIView):
   queryset = Gallery.objects.all()
   serializer_class = GallerySerializer
