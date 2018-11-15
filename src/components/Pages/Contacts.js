@@ -21,7 +21,7 @@ const Contacts = () => (
           </div>
           <div className='contacts__wrapper storehouse'>
             <div className='storehouse__pic'>
-              <img src="/images/storehouse.jpg" alt="StoreHouse"/>
+              <img src="http://cargo998.ru/media/gallery/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20181113150820_Y5YYT39.jpg" alt="StoreHouse"/>
             </div>
             <div className='contacts'>
               <p><h3>Склад</h3></p>
@@ -29,7 +29,7 @@ const Contacts = () => (
               <p><MaterialIcon icon='chat' size={25}/> <strong>wechat: </strong>18611537778 </p>
               <p><MaterialIcon icon='chat_bubble_outline' size={25}/> <strong>QQ: </strong>5357321 </p>
               <p><MaterialIcon icon='email' size={25}/> <strong>Email: </strong>5357321@qq.com</p>
-              <p><MaterialIcon icon='room' size={25}/> <strong>Адрес нашего склада: </strong>Qinglian District 3 (near Liantang District 4) 11, 1st Floor, 998 Treasury</p>
+              <p><MaterialIcon icon='room' size={25}/> <strong>Адрес нашего склада: </strong>998 Warehouse, No. 517, Zongze North Road, Yiwu City Liu Long 18611537778</p>
             </div>
           </div>
         </div>
