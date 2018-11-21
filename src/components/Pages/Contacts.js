@@ -9,7 +9,9 @@ const Contacts = () => (
         <h1 className='page__title'>Контакты</h1>
         <div className='page__content'>
           <div className='contacts__wrapper'>
-            <div id="map" className='map' />
+            <div className='map storehouse__pic'>
+              <img src="/images/truck.jpg" alt="StoreHouse"/>
+            </div>
             <div className='contacts'>
               <p><MaterialIcon icon='call' size={25}/> <strong>Nuri: </strong>13175523503</p>
               <p><MaterialIcon icon='chat_bubble' size={25}/> <strong>WhatsApp: </strong>13175523503</p>

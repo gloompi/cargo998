@@ -40,20 +40,33 @@
   </body>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=7210ee31-4905-4c55-af20-6f6c9c09e6a6&lang=ru_RU" type="text/javascript">
   </script>
-  <script type="text/javascript">
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init(){ 
-        // Создание карты.    
-        var myMap = new ymaps.Map("map", {
-          center: [29.30861579979043,120.07148847870334],
-          zoom: 10
-        });
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter51218072 = new Ya.Metrika2({
+                      id:51218072,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
 
-        var myPlacemark = new ymaps.Placemark([29.30861579979043,120.07148847870334])
-        myMap.behaviors.disable('scrollZoom')
-        myMap.geoObjects.add(myPlacemark)
-    }
-</script>
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks2");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/51218072" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </html>
